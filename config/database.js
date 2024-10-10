@@ -1,9 +1,14 @@
 const mysql = require('mysql2/promise');
 const dotenv = require('dotenv');
 
+// Load environment variables from .env file
 dotenv.config();
 
-const useRemoteDB = process.env.DB_ENV === 'remote';  // Control this via .env file
+// Determine if using a remote database
+const useRemoteDB = process.env.DB_ENV === 'remote';
+
+// Log the database connection details
+console.log(`Connecting to ${useRemoteDB ? 'remote' : 'local'} database at ${useRemoteDB ? process.env.REMOTE_DB_HOST : process.env.DB_HOST}`);
 
 // Create a connection pool
 const pool = mysql.createPool({
@@ -21,13 +26,19 @@ const pool = mysql.createPool({
 const testConnection = async () => {
     try {
         const connection = await pool.getConnection();
-        console.log(`Connected to the ${useRemoteDB ? 'remote' : 'local'} MySQL database!`);
+        console.log(`Successfully connected to the ${useRemoteDB ? 'remote' : 'local'} MySQL database!`);
         connection.release(); // Release the connection back to the pool
     } catch (err) {
-        console.error('Database connection error:', err);
+        // Enhanced error logging
+        console.error('Database connection error:', err.message);
+        if (err.code) {
+            console.error('Error code:', err.code);
+        }
     }
 };
 
+// Invoke the test connection function
 testConnection();
 
+// Export the pool for use in other modules
 module.exports = pool;
