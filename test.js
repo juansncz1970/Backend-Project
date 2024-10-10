@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
     res.send('Server is running. Welcome to the API!');
 });
 
-// Set port from environment variables or default to 5000
+// Set port from environment variables or default to 3000 (adjusted)
 const PORT = process.env.PORT || 5000;
 
 // Start server
