@@ -22,5 +22,12 @@ https://backend-project-9.onrender.com
 ### Course Endpoints:
 - **POST** `/api/courses`: Create a new course.
 
+### Student Endpoints:
+- **POST** `/api/students`: Add a new student.
+- **GET** `/api/students`: Get a list of all students.
+
+### Header
+- **Authorization**  `Bearer: {Token}`: Authorize token.
+
 ## GitHub Repository:
 [[GitHub Repo Link]](https://github.com/juansncz1970/Backend-Project)
