@@ -26,7 +26,7 @@ https://backend-project-9.onrender.com
 - **POST** `/api/students`: Add a new student.
 - **GET** `/api/students`: Get a list of all students.
 
-### Header
+### Header:
 - **Authorization**  `Bearer: {Token}`: Authorize token.
 
 ## GitHub Repository:
