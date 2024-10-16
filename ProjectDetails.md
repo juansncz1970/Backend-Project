@@ -1,4 +1,4 @@
-﻿# Backend-Project
+# Backend-Project
 
 # Render link provided:
  https://backend-project-9.onrender.com
@@ -13,7 +13,3 @@
 # Freemysqlhosting: 
     jfvolante@gbox.ncf.edu.ph
     Juan@1970
-
-# Github Account: 
-    juansncz1970
-    mangjuansencheese
