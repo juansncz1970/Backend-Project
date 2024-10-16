@@ -28,7 +28,37 @@ app.use('/api/students', studentRoutes);     // Student-related routes
 
 // Basic test route to check server functionality
 app.get('/', (req, res) => {
-    res.send('Server is running. Welcome to the API!');
+    const html = `
+        <html>
+            <head>
+                <style>
+                    body {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        font-family: Arial, sans-serif;
+                        background-color: #f4f4f4;
+                    }
+                    h1 {
+                        font-size: 48px;
+                        color: #333;
+                    }
+                    p {
+                        font-size: 24px;
+                        color: #555;
+                    }
+                </style>
+            </head>
+            <body>
+                <div>
+                    <h1>Server is running. Welcome to the API!</h1>
+                    <p>John Francis Volante - College of Computer Science</p>
+                </div>
+            </body>
+        </html>
+    `;
+    res.send(html);
 });
 
 // Set port from environment variables or default to 3000 (adjusted)
