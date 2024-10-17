@@ -53,7 +53,7 @@ app.get('/', (req, res) => {
             <body>
                 <div>
                     <h1>Server is running. Welcome to the API!</h1>
-                    <p>John Francis Volante - College of Computer Science</p>
+                    <p>John Francis Volante AKA Juan Sanchez - College of Computer Science</p>
                 </div>
             </body>
         </html>
